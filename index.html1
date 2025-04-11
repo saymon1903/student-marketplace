@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Student Marketplace</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudentHub - Marketplace & Ideas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Student Marketplace</h1>
+    <h1>StudentHub</h1>
     <nav>
-      <button class="button green">Login</button>
-      <button class="button gray">Sign Up</button>
+      <button class="green-btn">Home</button>
+      <button class="green-btn">Marketplace</button>
+      <button class="green-btn">Ideas</button>
+      <button class="green-btn">Requests</button>
+      <button class="red-btn">Logout</button>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Explore. Share. Grow.</h2>
-    <p>A platform where students sell, share, and shine with their creative works and ideas.</p>
-    <div class="hero-buttons">
-      <button class="button green">Sell Product</button>
-      <button class="button gray">Share Idea</button>
-      <button class="button red">Request Help</button>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <h2>Welcome to StudentHub!</h2>
+      <p>Your place to sell, share, and collaborate.</p>
+    </section>
 
-  <section class="categories">
-    <h3>Categories</h3>
-    <div class="category-list">
-      <div class="category-box">Books</div>
-      <div class="category-box">Art & Design</div>
-      <div class="category-box">Clothing</div>
-      <div class="category-box">Digital Skills</div>
-    </div>
-  </section>
+    <section class="features">
+      <div class="box">📚 Buy & Sell Items</div>
+      <div class="box">💡 Share Ideas</div>
+      <div class="box">🤝 Collaborate</div>
+      <div class="box">📢 Post Requests</div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Student Marketplace. All rights reserved.</p>
+    <p>&copy; 2025 StudentHub. All rights reserved.</p>
   </footer>
 </body>
 </html>
