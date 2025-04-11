@@ -1,1 +1,3 @@
-console.log("Website loaded successfully.");
+// Add interactivity here if needed
+console.log("Student Marketplace loaded successfully!");
+
