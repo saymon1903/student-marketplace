@@ -2,42 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Marketplace</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Student Marketplace Logo" class="logo">
+    <h1>Student Marketplace</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Buy</a>
-      <a href="#">Sell</a>
-      <a href="#">Ideas</a>
-      <a href="#">Login</a>
+      <button class="button green">Login</button>
+      <button class="button gray">Sign Up</button>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Welcome to Student Marketplace</h1>
-    <p>Buy, Sell, Share and Grow Together.</p>
-    <button>Explore Now</button>
+    <h2>Explore. Share. Grow.</h2>
+    <p>A platform where students sell, share, and shine with their creative works and ideas.</p>
+    <div class="hero-buttons">
+      <button class="button green">Sell Product</button>
+      <button class="button gray">Share Idea</button>
+      <button class="button red">Request Help</button>
+    </div>
   </section>
 
   <section class="categories">
-    <h2>Top Categories</h2>
-    <div class="category-grid">
-      <div class="cat-box">Books</div>
-      <div class="cat-box">Art</div>
-      <div class="cat-box">Clothes</div>
-      <div class="cat-box">Skills</div>
+    <h3>Categories</h3>
+    <div class="category-list">
+      <div class="category-box">Books</div>
+      <div class="category-box">Art & Design</div>
+      <div class="category-box">Clothing</div>
+      <div class="category-box">Digital Skills</div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Student Marketplace. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
