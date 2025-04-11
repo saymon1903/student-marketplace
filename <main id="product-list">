@@ -1,0 +1,11 @@
+<div class="product-card">
+  <h3>Used Math Book</h3>
+  <p>Price: ৳150</p>
+  <button class="filter-button">Contact Seller</button>
+</div>
+
+<div class="product-card">
+  <h3>Graphic Tee</h3>
+  <p>Price: ৳300</p>
+  <button class="filter-button">Contact Seller</button>
+</div>
