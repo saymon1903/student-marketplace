@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Student Marketplace Logo" class="logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Buy</a>
+      <a href="#">Sell</a>
+      <a href="#">Ideas</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Student Marketplace</h1>
+    <p>Buy, Sell, Share and Grow Together.</p>
+    <button>Explore Now</button>
+  </section>
+
+  <section class="categories">
+    <h2>Top Categories</h2>
+    <div class="category-grid">
+      <div class="cat-box">Books</div>
+      <div class="cat-box">Art</div>
+      <div class="cat-box">Clothes</div>
+      <div class="cat-box">Skills</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Student Marketplace. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
