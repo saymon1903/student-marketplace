@@ -1,52 +1,61 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StudentHub - Home</title>
+  <title>Student Marketplace</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header with Logo and Navigation -->
   <header>
-    <div class="logo">🎓 StudentHub</div>
+    <div class="logo-section">
+      <img src="logo.png" alt="Student Marketplace Logo" class="logo">
+      <h1>Student Marketplace</h1>
+    </div>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="marketplace.html">Marketplace</a>
-      <a href="share-ideas.html">Share Ideas</a>
-      <a href="#">Requests</a>
-      <a href="#">Login</a>
+      <button class="btn green" onclick="navigate('marketplace')">Marketplace</button>
+      <button class="btn green" onclick="navigate('ideas')">Share Ideas</button>
+      <button class="btn green" onclick="navigate('services')">Services</button>
+      <button class="btn red" onclick="navigate('request')">Request Board</button>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Empower Students to Create, Sell & Connect</h1>
-    <p>A modern platform for sharing creative works, ideas, and opportunities.</p>
-    <a href="marketplace.html" class="btn-green">Explore Marketplace</a>
-  </section>
+  <main id="main-section">
+    <section class="hero">
+      <h2>Buy, Sell & Share — Powered by Students</h2>
+      <p>Everything from second-hand books to creative digital services.</p>
+      <button class="btn green" onclick="getStarted()">Get Started</button>
+    </section>
 
-  <!-- Feature Section (Overview) -->
-  <section class="features">
-    <div class="feature-card">
-      <h2>Buy & Sell Items</h2>
-      <p>Discover second-hand books, clothes, art, and more.</p>
-    </div>
-    <div class="feature-card">
-      <h2>Share Your Ideas</h2>
-      <p>Submit your innovative ideas and attract investors.</p>
-    </div>
-    <div class="feature-card">
-      <h2>Request Support</h2>
-      <p>Post requests for help, collaboration, or custom projects.</p>
-    </div>
-  </section>
+    <section class="categories">
+      <div class="category-card">🎨 Art</div>
+      <div class="category-card">📚 Books</div>
+      <div class="category-card">👕 Clothes</div>
+      <div class="category-card">💻 Digital Skills</div>
+    </section>
 
-  <!-- Footer -->
+    <section class="info-boxes">
+      <div class="info-box">
+        <h3>Post a Product</h3>
+        <p>Simple and fast product posting system for students.</p>
+      </div>
+      <div class="info-box">
+        <h3>Share Your Idea</h3>
+        <p>Pitch your creative ideas and attract student investors.</p>
+      </div>
+      <div class="info-box">
+        <h3>Request Something</h3>
+        <p>Need help or a project partner? Ask the community.</p>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 StudentHub. All rights reserved.</p>
+    <p>&copy; 2025 Student Marketplace | Made for Dhaka Students</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
