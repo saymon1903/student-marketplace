@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudentHub | Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🎓 StudentHub</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="marketplace.html" class="active">Marketplace</a>
+      <a href="share-ideas.html">Share Ideas</a>
+      <a href="#">Requests</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <!-- Search and Filter Section -->
+  <section class="search-filter">
+    <input type="text" id="searchBar" placeholder="Search for products..." />
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="books">Books</option>
+      <option value="clothes">Clothes</option>
+      <option value="art">Art</option>
+      <option value="digital">Digital Skills</option>
+    </select>
+  </section>
+
+  <!-- Product Listing -->
+  <main id="productList" class="product-grid">
+    <!-- Product cards are rendered here via script.js -->
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 StudentHub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
