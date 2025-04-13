@@ -1,61 +1,35 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Marketplace</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fonts.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <div class="logo-section">
-      <img src="logo.png" alt="Student Marketplace Logo" class="logo">
-      <h1>Student Marketplace</h1>
+    <div class="logo">
+      <img src="logo.png" alt="Student Marketplace Logo">
+      <span>STUDENT MARKETPLACE</span>
     </div>
     <nav>
-      <button class="btn green" onclick="navigate('marketplace')">Marketplace</button>
-      <button class="btn green" onclick="navigate('ideas')">Share Ideas</button>
-      <button class="btn green" onclick="navigate('services')">Services</button>
-      <button class="btn red" onclick="navigate('request')">Request Board</button>
+      <a href="#">Home</a>
+      <a href="#">Marketplace</a>
+      <a href="#">Share Ideas</a>
+      <a href="#">Login</a>
     </nav>
   </header>
 
-  <main id="main-section">
-    <section class="hero">
-      <h2>Buy, Sell & Share — Powered by Students</h2>
-      <p>Everything from second-hand books to creative digital services.</p>
-      <button class="btn green" onclick="getStarted()">Get Started</button>
-    </section>
-
-    <section class="categories">
-      <div class="category-card">🎨 Art</div>
-      <div class="category-card">📚 Books</div>
-      <div class="category-card">👕 Clothes</div>
-      <div class="category-card">💻 Digital Skills</div>
-    </section>
-
-    <section class="info-boxes">
-      <div class="info-box">
-        <h3>Post a Product</h3>
-        <p>Simple and fast product posting system for students.</p>
-      </div>
-      <div class="info-box">
-        <h3>Share Your Idea</h3>
-        <p>Pitch your creative ideas and attract student investors.</p>
-      </div>
-      <div class="info-box">
-        <h3>Request Something</h3>
-        <p>Need help or a project partner? Ask the community.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Student Marketplace | Made for Dhaka Students</p>
-  </footer>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="logo.png" alt="Hero Logo" class="hero-logo" />
+    <h1><span class="highlight">Welcome</span> to the <u>Student Marketplace</u></h1>
+    <p>Buy, Sell & Share creative ideas with <strong>students</strong> across Dhaka.</p>
+  </section>
 
   <script src="script.js"></script>
 </body>
 </html>
-
