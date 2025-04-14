@@ -17,3 +17,10 @@ function processSignupForm(event) {
 
 // সাইন আপ ফর্মের সাবমিট ইভেন্ট লিসেনার
 document.querySelector('form').addEventListener('submit', processSignupForm);
+// script.js
+
+document.querySelectorAll(".btn").forEach(button => {
+  button.addEventListener("click", () => {
+    alert("This will take you to the signup page. Coming soon!");
+  });
+});
