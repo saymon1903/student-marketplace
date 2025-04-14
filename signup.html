@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সাইন আপ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">আমাদের লোগো</div>
+  </header>
+
+  <main>
+    <h1>সাইন আপ করুন</h1>
+    <form>
+      <input type="hidden" name="userType" value="buyer"> <!-- ডাইনামিকভাবে পরিবর্তন হবে -->
+      <label for="email">ইমেইল:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="name">নাম:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="address">ঠিকানা:</label>
+      <input type="text" id="address" name="address">
+
+      <label for="phone">ফোন নাম্বার:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="age">বয়স:</label>
+      <input type="number" id="age" name="age">
+
+      <label for="gender">লিঙ্গ:</label>
+      <select id="gender" name="gender">
+        <option value="male">পুরুষ</option>
+        <option value="female">মহিলা</option>
+        <option value="other">অন্যান্য</option>
+      </select>
+
+      <label for="image">ছবি আপলোড করুন:</label>
+      <input type="file" id="image" name="image">
+
+      <button type="submit">সাইন আপ করুন</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 আমাদের ওয়েবসাইট</p>
+  </footer>
+</body>
+</html>
