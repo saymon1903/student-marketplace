@@ -1,63 +1,6 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  font-size: 24px;
-}
-
-header nav button {
-  background-color: #555;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-header nav button:hover {
-  background-color: #777;
-}
-
-main {
-  padding: 20px;
-}
-
-.signup-options button,
-.entrepreneur-world button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 15px;
-  margin: 10px 0;
-  cursor: pointer;
-  width: 100%;
-}
-
-.signup-options button:hover,
-.entrepreneur-world button:hover {
-  background-color: #45a049;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-}
 /* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
   background-color: #000;
@@ -73,20 +16,23 @@ body {
 }
 
 .entry-container {
-  max-width: 420px;
+  max-width: 400px;
+  width: 90%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .logo {
-  width: 120px;
+  width: 110px;
   height: auto;
   margin-bottom: 20px;
 }
 
 .main-heading {
   font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
 }
 
 .description {
@@ -96,7 +42,7 @@ body {
 }
 
 .btn.green {
-  background: linear-gradient(135deg, #00ff84, #00cc66);
+  background: linear-gradient(135deg, #00ff9d, #00cc66);
   color: #000;
   font-weight: 600;
   padding: 12px 20px;
