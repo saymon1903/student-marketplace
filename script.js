@@ -1,9 +1,19 @@
-// script.js
+// সাইন আপ ফর্মের ডেটা সংগ্রহ এবং প্রক্রিয়া করার জন্য ফাংশন
+function processSignupForm(event) {
+  event.preventDefault();
 
-function navigate(page) {
-  alert("Page switching not built yet: " + page);
+  const formData = new FormData(event.target);
+  const userType = formData.get('userType');
+  const userData = {};
+
+  formData.forEach((value, key) => {
+    userData[key] = value;
+  });
+
+  // ইউজার ডেটা প্রক্রিয়া এবং সেভ করার কোড এখানে যুক্ত করুন
+
+  alert(`${userType} হিসেবে সাইন আপ সফল হয়েছে!`);
 }
 
-function getStarted() {
-  alert("Redirecting to Marketplace...");
-}
+// সাইন আপ ফর্মের সাবমিট ইভেন্ট লিসেনার
+document.querySelector('form').addEventListener('submit', processSignupForm);
