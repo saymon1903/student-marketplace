@@ -57,3 +57,79 @@ footer {
   background-color: #333;
   color: white;
 }
+/* style.css */
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.entry-container {
+  max-width: 420px;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.btn.green {
+  background: linear-gradient(135deg, #00ff84, #00cc66);
+  color: #000;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 14px;
+  border: none;
+  margin: 10px 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn.green:hover {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+.subtext {
+  font-size: 13px;
+  color: #aaffdd;
+  margin-bottom: 15px;
+}
+
+.login-link {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #4fff9f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
