@@ -1,6 +1,75 @@
+# Creating a zip file containing the updated dashboard HTML files for different user types
+
+from zipfile import ZipFile
+import os
+
+# Define the folder and file names
+folder_path = "/mnt/data/studenthub_dashboard"
+os.makedirs(folder_path, exist_ok=True)
+
+# Create HTML content for different dashboard views
+dashboard_buyer = """
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta
-::contentReference[oaicite:1]{index=1}
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buyer Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome Buyer!</h1>
+  <p>You can browse, search and purchase products.</p>
+</body>
+</html>
+"""
+
+dashboard_seller = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seller Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome Seller!</h1>
+  <p>You can upload, edit and manage your product listings.</p>
+</body>
+</html>
+"""
+
+dashboard_entrepreneur = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entrepreneur Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome Entrepreneur!</h1>
+  <p>You can submit startup ideas, track investments, and find collaborators.</p>
+</body>
+</html>
+"""
+
+# Save the files
+file_paths = []
+for filename, content in [("dashboard_buyer.html", dashboard_buyer),
+                          ("dashboard_seller.html", dashboard_seller),
+                          ("dashboard_entrepreneur.html", dashboard_entrepreneur)]:
+    file_path = os.path.join(folder_path, filename)
+    with open(file_path, "w") as f:
+        f.write(content)
+    file_paths.append(file_path)
+
+# Create a zip archive of the dashboard files
+zip_path = "/mnt/data/dashboards.zip"
+with ZipFile(zip_path, 'w') as zipf:
+    for file in file_paths:
+        zipf.write(file, os.path.basename(file))
+
+zip_path
