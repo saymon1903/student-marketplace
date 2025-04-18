@@ -1,78 +1,79 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #fffdf6;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Logo Section */
-.logo-section {
+  font-family: Arial, sans-serif;
+  padding: 20px;
   text-align: center;
-  margin-top: 30px;
 }
 
-.main-logo {
-  width: 300px;
-  height: auto;
+/* Logo */
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 220px;
 }
 
 @media (max-width: 768px) {
-  .main-logo {
-    width: 200px;
+  .logo img {
+    width: 180px;
   }
 }
 
-/* Card Container */
+/* Cards Layout */
 .card-container {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 30px 10px;
 }
 
-/* Individual Cards */
-.info-card {
-  background: #fef3e7;
+/* Each Card */
+.card {
+  background-color: #fef3e7;
+  padding: 25px 20px;
   width: 280px;
   border-radius: 20px;
-  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Card Headings */
-.info-card h2 {
+/* Headings */
+.card h2 {
   font-family: 'Brush Script MT', cursive;
   color: #3d1f0f;
   font-size: 24px;
   margin-bottom: 15px;
+  line-height: 1.3;
 }
 
-/* Card Text */
-.info-card p {
-  color: #4b2e1f;
+/* Text */
+.card p {
   font-size: 14px;
-  line-height: 1.5;
+  color: #4b2e1f;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* Sign Up Button */
-.signup-btn {
+/* Button */
+.card button {
   background-color: black;
   color: #f8a64b;
   border: none;
   padding: 10px 30px;
   font-weight: bold;
-  border-radius: 40px;
+  border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-.signup-btn:hover {
+.card button:hover {
   background-color: #222;
 }
