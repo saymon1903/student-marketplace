@@ -1,47 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Marketplace</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="logo-section">
-    <img src="student-marketplace-logo.png" alt="Student Marketplace Logo" class="main-logo">
-  </div>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffdf6;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  <div class="card-container">
-    <!-- Buyer Card -->
-    <div class="info-card">
-      <h2>Buyer</h2>
-      <p>
-        you can explore creative student products, second-hand items, and unique services.<br>
-        You can ask sellers questions directly, make secure cash payments, and receive delivery in Dhaka.<br>
-        Every purchase helps support student innovation and creativity.
-      </p>
-      <button class="signup-btn">SINGUP</button>
-    </div>
+/* Logo Section */
+.logo-section {
+  text-align: center;
+  margin-top: 30px;
+}
 
-    <!-- Buyer & Seller Card -->
-    <div class="info-card">
-      <h2>Buyer & Seller</h2>
-      <p>
-        they can both explore and purchase creative student products, as well as list and sell their own items or ideas.<br>
-        It’s the perfect role for those who want to learn and earn at the same time.
-      </p>
-      <button class="signup-btn">SINGUP</button>
-    </div>
+.main-logo {
+  width: 300px;
+  height: auto;
+}
 
-    <!-- Entrepreneur Card -->
-    <div class="info-card">
-      <h2>The word of Entrepreneur</h2>
-      <p>
-        you can register your innovative ideas, update or improve them anytime, and showcase them to a network of students and potential supporters.<br>
-        You’ll also have the chance to attract investors, find collaborators, and turn your vision into reality.
-      </p>
-      <button class="signup-btn">SINGUP</button>
-    </div>
-  </div>
-</body>
-</html>
+@media (max-width: 768px) {
+  .main-logo {
+    width: 200px;
+  }
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+}
+
+/* Individual Cards */
+.info-card {
+  background: #fef3e7;
+  width: 280px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Card Headings */
+.info-card h2 {
+  font-family: 'Brush Script MT', cursive;
+  color: #3d1f0f;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Card Text */
+.info-card p {
+  color: #4b2e1f;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Sign Up Button */
+.signup-btn {
+  background-color: black;
+  color: #f8a64b;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  border-radius: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #222;
+}
