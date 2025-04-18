@@ -6,9 +6,27 @@ body {
   text-align: center;
 }
 
-.logo img {
-  max-width: 300px;
-  margin-top: 30px;
+.logo-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-box img {
+  width: 340px;
+  height: auto;
+  border-radius: 20px;
+  background: #fffaf0;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .logo-box img {
+    width: 250px;
+    border-radius: 15px;
+  }
 }
 
 .container {
