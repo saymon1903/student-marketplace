@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StudentHub - Home</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Student Marketplace</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="StudentHub Logo" class="logo" />
-        <nav>
-            <a href="marketplace.html">Marketplace</a>
-            <a href="ideas.html">Ideas</a>
-            <a href="club.html">Clubs</a>
-            <a href="profile.html">Profile</a>
-            <a href="signup.html" class="green-btn">Sign Up</a>
-        </nav>
-    </header>
-    <main class="center-text">
-        <h1>Welcome to StudentHub</h1>
-        <p>The place for students to buy, sell, share ideas, and collaborate.</p>
-    </main>
-    <script src="script.js"></script>
+  <div class="logo">
+    <img src="logo.png" alt="Student Marketplace Logo">
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Buyer</h2>
+      <p>you can explore creative student products, second-hand items, and unique services. You can ask sellers questions directly, make secure cash payments, and receive delivery in Dhaka. Every purchase helps support student innovation and creativity.</p>
+      <button onclick="location.href='signup.html?type=buyer'">SINGUP</button>
+    </div>
+
+    <div class="card">
+      <h2>Buyer & Seller</h2>
+      <p>they can both explore and purchase creative student products, as well as list and sell their own items or ideas. It’s the perfect role for those who want to learn and earn at the same time.</p>
+      <button onclick="location.href='signup.html?type=buyer-seller'">SINGUP</button>
+    </div>
+
+    <div class="card">
+      <h2>The world of Entrepreneur</h2>
+      <p>you can register your innovative ideas, update or improve them anytime, and showcase them to a network of students and potential supporters. You’ll also have the chance to attract investors, find collaborators, and turn your vision into reality.</p>
+      <button onclick="location.href='signup.html?type=entrepreneur'">SINGUP</button>
+    </div>
+  </div>
 </body>
 </html>
