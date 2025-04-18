@@ -1,29 +1,47 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #fffdf6;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="logo-section">
+    <img src="student-marketplace-logo.png" alt="Student Marketplace Logo" class="main-logo">
+  </div>
 
-.logo-container {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-}
+  <div class="card-container">
+    <!-- Buyer Card -->
+    <div class="info-card">
+      <h2>Buyer</h2>
+      <p>
+        you can explore creative student products, second-hand items, and unique services.<br>
+        You can ask sellers questions directly, make secure cash payments, and receive delivery in Dhaka.<br>
+        Every purchase helps support student innovation and creativity.
+      </p>
+      <button class="signup-btn">SINGUP</button>
+    </div>
 
-.main-logo {
-  max-width: 500px;
-  width: 90%;
-  height: auto;
-  display: inline-block;
-}
+    <!-- Buyer & Seller Card -->
+    <div class="info-card">
+      <h2>Buyer & Seller</h2>
+      <p>
+        they can both explore and purchase creative student products, as well as list and sell their own items or ideas.<br>
+        It’s the perfect role for those who want to learn and earn at the same time.
+      </p>
+      <button class="signup-btn">SINGUP</button>
+    </div>
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .main-logo {
-    max-width: 300px;
-  }
-}
+    <!-- Entrepreneur Card -->
+    <div class="info-card">
+      <h2>The word of Entrepreneur</h2>
+      <p>
+        you can register your innovative ideas, update or improve them anytime, and showcase them to a network of students and potential supporters.<br>
+        You’ll also have the chance to attract investors, find collaborators, and turn your vision into reality.
+      </p>
+      <button class="signup-btn">SINGUP</button>
+    </div>
+  </div>
+</body>
+</html>
