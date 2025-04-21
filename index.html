@@ -1,64 +1,107 @@
-/* style.css */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Interface</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-}
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
 
-.logo-section {
-  margin-bottom: 2rem;
-}
+    .container {
+      max-width: 100vw;
+      min-height: 100vh;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-.logo {
-  width: 180px;
-  height: auto;
-}
+    .top-design {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.card-container {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    .top-design img {
+      max-width: 100%;
+      height: auto;
+    }
 
-.card {
-  background-color: #fdf6ed;
-  border-radius: 20px;
-  padding: 1.5rem;
-  width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    .card {
+      border: 2px solid #00ff00;
+      padding: 20px;
+      width: 100%;
+      max-width: 700px;
+      align-self: flex-start;
+    }
 
-.title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  font-family: 'Brush Script MT', cursive;
-  color: #422507;
-  margin-bottom: 1rem;
-}
+    .card h2 {
+      color: #00ff00;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      text-align: left;
+    }
 
-.desc {
-  font-size: 0.9rem;
-  color: #422507;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      text-align: left;
+    }
 
-.btn {
-  background-color: black;
-  color: #f1a347;
-  padding: 0.5rem 1.5rem;
-  border-radius: 15px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .card button {
+      padding: 10px 20px;
+      background-color: #00ff00;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        align-items: flex-start;
+        padding: 50px 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-design">
+      <img src="https://student-marketplace.netlify.app/logo-design.png" alt="Top Design" />
+    </div>
+
+    <div class="card">
+      <h2>স্বাগতম STUDENT MARKETPLACE</h2>
+      <p>এটি শুধুমাত্র ঢাকা শহরের ছাত্রছাত্রীদের জন্য একটি সম্পূর্ণ ফ্রি প্ল্যাটফর্ম।</p>
+      <button>SIGN UP</button>
+    </div>
+
+    <div class="card">
+      <h2>তোমার জিনিস বিক্রি করো</h2>
+      <p>পুরোনো বা নতুন যেকোনো প্রোডাক্ট বিক্রি করো খুব সহজে, একদম নিরাপদে।</p>
+      <button>SELL NOW</button>
+    </div>
+
+    <div class="card">
+      <h2>তোমার আইডিয়া শেয়ার করো</h2>
+      <p>তোমার ইউনিক আইডিয়াগুলো পোস্ট করো এবং বিনিয়োগকারী খুঁজে পাওয়ার সুযোগ নাও।</p>
+      <button>SHARE IDEA</button>
+    </div>
+  </div>
+</body>
+</html>
