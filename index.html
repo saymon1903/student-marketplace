@@ -3,107 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Intro Interface</title>
+  <title>Welcome Interface</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
     body {
-      background-color: #000;
-      color: #fff;
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
+      min-height: 100vh;
     }
+
     .header {
       width: 100%;
       height: auto;
     }
-    .header img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+
     .content {
-      padding: 20px;
-      width: 100%;
-      max-width: 700px;
+      padding: 30px 20px;
     }
-    .section {
-      margin-bottom: 30px;
-    }
-    .section h2 {
-      font-size: 24px;
+
+    .content h1, .content p {
       text-align: left;
-      margin-bottom: 10px;
+      margin: 10px 0;
     }
-    .section p {
-      font-size: 18px;
-      text-align: left;
-      line-height: 1.5;
-    }
-    .buttons {
+
+    .btn-group {
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       gap: 15px;
-      margin-top: 30px;
     }
-    .buttons button {
-      padding: 15px;
-      font-size: 18px;
-      width: 100%;
-      background-color: #1db954;
+
+    .btn-group button {
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: green;
       border: none;
-      border-radius: 8px;
       color: white;
+      border-radius: 8px;
       cursor: pointer;
     }
-    @media (max-width: 768px) {
+
+    @media (min-width: 768px) {
       .content {
-        padding: 15px;
-      }
-      .section h2 {
-        font-size: 20px;
-      }
-      .section p {
-        font-size: 16px;
-      }
-      .buttons button {
-        font-size: 16px;
-        padding: 12px;
+        max-width: 600px;
+        margin: 0 auto;
       }
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <img src="header-design.png" alt="Header Design">
-  </div>
+  <img src="header-design.png" alt="Header Design" class="header" />
 
   <div class="content">
-    <div class="section">
-      <h2>WHO AM I ?</h2>
-      <p>I am an AI-powered digital assistant, trained by OpenAI to provide answers, support, and creative help.</p>
-    </div>
+    <h1>WELCOME TO</h1>
+    <h1>STUDENT MARKETPLACE</h1>
+    <p>We are building the future of students in Dhaka...</p>
 
-    <div class="section">
-      <h2>WHAT CAN I DO ?</h2>
-      <p>I can assist with programming, design ideas, self-improvement tips, motivation, and more—just like your personal assistant!</p>
-    </div>
-
-    <div class="section">
-      <h2>WHY CHOOSE ME ?</h2>
-      <p>Because I’m fast, reliable, constantly improving, and ready 24/7 to support your ideas and growth!</p>
-    </div>
-
-    <div class="buttons">
-      <button>Start Your Journey</button>
-      <button>Connect With Community</button>
-      <button>Explore More</button>
+    <div class="btn-group">
+      <button>Login</button>
+      <button>Sign Up</button>
+      <button>Continue as Guest</button>
     </div>
   </div>
 </body>
