@@ -1,33 +1,99 @@
+<!-- File Name: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Marketplace</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo-container {
+      margin-bottom: 20px;
+    }
+    .logo {
+      max-width: 300px;
+      width: 100%;
+    }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .card {
+      background-color: #111;
+      border: 1px solid #444;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,255,0,0.3);
+    }
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #00ff00;
+      line-height: 1.3;
+    }
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .card button {
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .card-container {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1200px;
+      }
+      .card {
+        width: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <div class="logo">
-    <img src="student-marketplace-logo.png" alt="Logo">
+  <div class="logo-container">
+    <img src="https://i.ibb.co/Q7Ymc2f/logo.png" alt="Logo" class="logo">
   </div>
 
   <div class="card-container">
-
     <div class="card">
       <h2>Buyer</h2>
       <p>
-        you can explore creative <br>
+        you can explore creative<br>
         student products,<br>
-        second-hand items, <br>
+        second-hand items,<br>
         and unique services.<br>
-        You can ask sellers <br>
+        You can ask sellers<br>
         questions directly,<br>
         make secure cash payments,<br>
-        and receive <br>
+        and receive<br>
         delivery in Dhaka.<br>
-        Every purchase <br>
-        helps support student <br>
+        Every purchase<br>
+        helps support student<br>
         innovation and creativity.
       </p>
       <button>SINGUP</button>
@@ -36,41 +102,39 @@
     <div class="card">
       <h2>Buyer & Seller</h2>
       <p>
-        they can both explore <br>
-        and purchase creative student <br>
-        products, <br>
-        as well as list <br>
-        and sell their <br>
+        they can both explore<br>
+        and purchase creative student<br>
+        products,<br>
+        as well as list<br>
+        and sell their<br>
         own items or ideas.<br>
-        It’s the perfect <br>
-        role for those who want to <br>
-        learn <br>
-        and earn at <br>
+        It's the perfect<br>
+        role for those who want to<br>
+        learn<br>
+        and earn at<br>
         the same time.
       </p>
       <button>SINGUP</button>
     </div>
 
     <div class="card">
-      <h2>The word of <br> Entrepreneur</h2>
+      <h2>The word of<br>Entrepreneur</h2>
       <p>
-        you can register your <br>
-        innovative ideas, <br>
-        update or improve them <br>
+        you can register your<br>
+        innovative ideas,<br>
+        update or improve them<br>
         anytime,<br>
-        and showcase them to a <br>
-        network of students and <br>
+        and showcase them to a<br>
+        network of students and<br>
         potential supporters.<br>
-        You’ll also have the chance to <br>
+        You'll also have the chance to<br>
         attract investors,<br>
         find collaborators,<br>
-        and turn your vision into <br>
+        and turn your vision into<br>
         reality.
       </p>
       <button>SINGUP</button>
     </div>
-
   </div>
-
 </body>
 </html>
