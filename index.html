@@ -1,73 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome Interface</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
 
-    .header {
-      width: 100%;
-      height: auto;
-    }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
 
-    .content {
-      padding: 30px 20px;
-    }
+.logo-section {
+  margin-bottom: 2rem;
+}
 
-    .content h1, .content p {
-      text-align: left;
-      margin: 10px 0;
-    }
+.logo {
+  width: 180px;
+  height: auto;
+}
 
-    .btn-group {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
+.card-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .btn-group button {
-      padding: 12px 30px;
-      font-size: 16px;
-      background-color: green;
-      border: none;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.card {
+  background-color: #fdf6ed;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
 
-    @media (min-width: 768px) {
-      .content {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-    }
-  </style>
-</head>
-<body>
-  <img src="header-design.png" alt="Header Design" class="header" />
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive;
+  color: #422507;
+  margin-bottom: 1rem;
+}
 
-  <div class="content">
-    <h1>WELCOME TO</h1>
-    <h1>STUDENT MARKETPLACE</h1>
-    <p>We are building the future of students in Dhaka...</p>
+.desc {
+  font-size: 0.9rem;
+  color: #422507;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
 
-    <div class="btn-group">
-      <button>Login</button>
-      <button>Sign Up</button>
-      <button>Continue as Guest</button>
-    </div>
-  </div>
-</body>
-</html>
+.btn {
+  background-color: black;
+  color: #f1a347;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
