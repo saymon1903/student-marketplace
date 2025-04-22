@@ -1,128 +1,97 @@
-import zipfile
-import os
+import React from "react";
+import { useState } from "react";
+import { Button, Input, Card, CardContent, CardHeader } from "@/components/ui";
+import { Tabs, Tab } from "@/components/ui/tabs";
+import { Modal } from "@/components/ui/modal";
+import { useForm } from "react-hook-form";
 
-# Create a directory for the website files
-project_dir = "/mnt/data/website_header_interface"
-os.makedirs(project_dir, exist_ok=True)
+const App = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("home");
 
-# Define file contents based on the exact design from the image provided
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
-# index.html
-index_html = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Welcome Page</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <img src="header-design.png" alt="Header Design" class="header-img" />
-    <div class="content">
-      <p class="text">Welcome to Student Marketplace</p>
-      <p class="text">You can Buy, Sell and Share Creative Items</p>
-      <p class="text">Start your journey with us</p>
-      <div class="buttons">
-        <button class="btn">Sign up as Buyer</button>
-        <button class="btn">Sign up as Seller</button>
-        <button class="btn">Continue as Guest</button>
-      </div>
+  const onSubmit = (data) => {
+    console.log("Form Data:", data);
+    closeModal();
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section */}
+      <header className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="text-xl font-bold">MyLogo</div>
+          <div className="space-x-4 flex items-center">
+            <span className="animate-pulse text-sm">Your ideas. Your future. Be a success!</span>
+            <Button variant="ghost" className="inline-flex items-center" onClick={openModal}>
+              Sign Up Options
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Tabs */}
+      <Tabs defaultValue="home" value={activeTab} onValueChange={setActiveTab} className="container mx-auto mt-6">
+        <Tab value="home" label="Home">
+          {/* Home Content */}
+          <div className="p-4">
+            Welcome to our world of young entrepreneurs. Navigate through our powerful features.
+          </div>
+        </Tab>
+
+        <Tab value="marketplace" label="Marketplace">
+          {/* Marketplace Content */}
+          <div className="p-4">All products and categories will be displayed here.</div>
+        </Tab>
+
+        <Tab value="club" label="Club">
+          {/* Club Content */}
+          <div className="p-4">Join and manage clubs of like-minded individuals.</div>
+        </Tab>
+
+        <Tab value="entrepreneurs" label="The World of Entrepreneurs">
+          {/* Entrepreneurs Section */}
+          <div className="p-4">Register and showcase your unique ideas to the world.</div>
+        </Tab>
+      </Tabs>
+
+      {/* Sign Up Modal */}
+      <Modal open={modalOpen} onClose={closeModal} title="Sign Up Options">
+        <div className="p-4 space-y-4">
+          <Card>
+            <CardHeader>Sign Up as a Buyer</CardHeader>
+            <CardContent>
+              <p>Quick and easy sign-up for buyers. Just use your email.</p>
+              <Button variant="primary">Sign Up</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>Sign Up as a Buyer and Seller</CardHeader>
+            <CardContent>
+              <p>Provide detailed information to create a dual profile.</p>
+              <Button variant="primary">Sign Up</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>The World of Young Entrepreneurs</CardHeader>
+            <CardContent>
+              <p>Register your ideas and explore opportunities in entrepreneurship.</p>
+              <Button variant="primary">Sign Up</Button>
+            </CardContent>
+          </Card>
+        </div>
+      </Modal>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-800 text-white py-4">
+        <div className="container mx-auto text-center">
+          <p>&copy; 2025 Your Website. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
-  </div>
-</body>
-</html>
-"""
+  );
+};
 
-# style.css
-style_css = """
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-}
-
-.header-img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-}
-
-.content {
-  margin-top: 20px;
-  padding-left: 10px;
-}
-
-.text {
-  margin: 10px 0;
-  font-size: 1.2rem;
-  text-align: left;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-.btn {
-  background-color: green;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px 0;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 200px;
-  text-align: left;
-}
-
-@media (max-width: 768px) {
-  .text {
-    font-size: 1rem;
-  }
-  .btn {
-    width: 100%;
-  }
-}
-"""
-
-# header image placeholder (user will replace it with actual image)
-image_path = "/mnt/data/website_header_interface/header-design.png"
-
-# Save files
-with open(os.path.join(project_dir, "index.html"), "w") as f:
-    f.write(index_html.strip())
-
-with open(os.path.join(project_dir, "style.css"), "w") as f:
-    f.write(style_css.strip())
-
-# Create a ZIP of the project
-zip_path = "/mnt/data/student_welcome_page.zip"
-with zipfile.ZipFile(zip_path, "w") as zipf:
-    zipf.write(os.path.join(project_dir, "index.html"), "index.html")
-    zipf.write(os.path.join(project_dir, "style.css"), "style.css")
-    if os.path.exists(image_path):
-        zipf.write(image_path, "header-design.png")
-
-zip_path
+export default App;
